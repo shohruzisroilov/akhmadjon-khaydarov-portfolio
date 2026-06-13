@@ -59,7 +59,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-12 md:py-16 relative">
+    <section id="about" ref={sectionRef} className="py-12 md:py-16 relative overflow-hidden">
+      {/* Subtle ambient glows */}
+      <div className="absolute top-1/3 -right-24 w-80 h-80 bg-amber-100/20 rounded-full blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-10 -left-24 w-96 h-96 bg-orange-100/15 rounded-full blur-[120px] pointer-events-none -z-10" />
+
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Section Label */}
         <div className="animate-on-scroll flex items-center gap-3 mb-16">
@@ -71,15 +75,15 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left: Profile card */}
-          <div className="animate-on-scroll delay-200 relative">
+          <div className="animate-on-scroll delay-200 relative group">
             <div className="relative max-w-md">
-              <div className="relative bg-white rounded-2xl border border-stone-100 p-8 shadow-sm">
+              <div className="relative bg-white rounded-2xl border border-stone-100/80 p-8 shadow-sm hover:shadow-md hover:border-stone-200/60 transition-all duration-500">
                 {/* Avatar */}
-                <div className="w-20 h-20 rounded-full bg-stone-100 flex items-center justify-center mb-6">
-                  <span className="text-2xl font-semibold text-stone-600">AK</span>
+                <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-500/10 to-amber-600/5 text-amber-800 border border-amber-500/15 flex items-center justify-center mb-6">
+                  <span className="text-2xl font-bold text-amber-800 font-display">AK</span>
                 </div>
 
-                <h3 className="text-xl font-semibold text-stone-900 mb-1">Akhmadjon Khaydarov</h3>
+                <h3 className="text-xl font-semibold text-stone-900 mb-1 font-display">Akhmadjon Khaydarov</h3>
                 <p className="text-sm text-stone-500 font-light mb-1">
                   Business Development Manager
                 </p>
@@ -188,13 +192,13 @@ export default function About() {
               </div>
 
               {/* Decorative block */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full border border-stone-200 rounded-2xl -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full border border-stone-200 rounded-2xl -z-10 group-hover:translate-x-1.5 group-hover:translate-y-1.5 group-hover:border-amber-400/45 transition-all duration-500" />
             </div>
           </div>
 
           {/* Right: Text content */}
           <div className="flex flex-col justify-center gap-8">
-            <h2 className="animate-on-scroll delay-100 text-3xl md:text-4xl font-light text-stone-900 tracking-tight leading-tight">
+            <h2 className="animate-on-scroll delay-100 text-3xl md:text-4xl font-light text-stone-900 tracking-tight leading-tight font-display">
               Elevating the creative industry
               <br className="hidden md:block" /> to a{" "}
               <span className="font-semibold text-stone-900">global scale</span>
@@ -230,11 +234,11 @@ export default function About() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <svg
-                    className="w-4 h-4 text-stone-400 mt-0.5 shrink-0"
+                    className="w-4 h-4 text-amber-500 mt-0.5 shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    strokeWidth={2}
+                    strokeWidth={2.5}
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -247,7 +251,7 @@ export default function About() {
             <div className="animate-on-scroll delay-400 grid grid-cols-4 gap-4 mt-4 pt-8 border-t border-stone-200">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-2xl md:text-3xl font-semibold text-stone-900 tracking-tight">
+                  <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent tracking-tight font-display">
                     {stat.number}
                   </div>
                   <div className="text-[11px] font-medium tracking-wide uppercase text-stone-400 mt-1">

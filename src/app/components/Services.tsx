@@ -170,8 +170,12 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-12 md:py-16 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-stone-50/50 to-transparent" />
+    <section id="services" ref={sectionRef} className="py-12 md:py-16 relative overflow-hidden">
+      {/* Subtle ambient glows */}
+      <div className="absolute top-1/4 -left-24 w-96 h-96 bg-amber-100/15 rounded-full blur-[110px] pointer-events-none -z-10 animate-subtle-float" />
+      <div className="absolute bottom-1/4 -right-24 w-80 h-80 bg-orange-100/10 rounded-full blur-[120px] pointer-events-none -z-10" />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-stone-50/20 to-transparent pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-12">
         {/* Section Label */}
@@ -183,7 +187,7 @@ export default function Services() {
         </div>
 
         <div className="animate-on-scroll delay-100 flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-stone-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-light text-stone-900 tracking-tight font-display">
             What <span className="font-semibold">I Offer</span>
             <span className="text-amber-500 font-semibold">.</span>
           </h2>
@@ -205,7 +209,7 @@ export default function Services() {
                 {service.icon}
               </div>
 
-              <h3 className="text-base font-semibold text-stone-900 mb-2 group-hover:text-stone-700 transition-colors duration-300">
+              <h3 className="text-base font-semibold text-stone-900 mb-2 group-hover:text-stone-700 transition-colors duration-300 font-display">
                 {service.title}
               </h3>
 
@@ -221,7 +225,7 @@ export default function Services() {
           <a
             href="#contact"
             id="services-contact-btn"
-            className="inline-flex items-center gap-2 text-sm font-medium px-7 py-3.5 border border-stone-300 text-stone-700 rounded-full hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300"
+            className="inline-flex items-center gap-2 text-sm font-medium px-7 py-3.5 border border-stone-300 text-stone-750 rounded-full hover:bg-amber-600 hover:text-white hover:border-amber-600 hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
           >
             Inquire About Services
             <svg

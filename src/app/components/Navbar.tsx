@@ -34,18 +34,18 @@ export default function Navbar() {
         <a
           href="#"
           id="nav-logo"
-          className="text-lg font-semibold tracking-tight text-stone-900 hover:text-stone-600 transition-colors duration-300"
+          className="text-lg font-semibold tracking-tight text-stone-900 hover:text-amber-600 transition-colors duration-300 font-display"
         >
-          AK<span className="text-stone-400">.</span>
+          AK<span className="text-amber-500 font-bold">.</span>
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-3">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-[13px] font-medium tracking-wide uppercase text-stone-500 hover:text-stone-900 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[1px] after:bg-stone-900 after:transition-all after:duration-300 hover:after:w-full"
+                className="text-[12px] font-medium tracking-wide uppercase text-stone-600 hover:text-amber-700 px-4 py-1.5 border border-stone-200/80 hover:border-amber-400 hover:bg-amber-50/20 rounded-full transition-all duration-300"
               >
                 {link.label}
               </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
         <a
           href="#contact"
           id="nav-contact-btn"
-          className="hidden md:flex items-center gap-2 text-[13px] font-medium px-5 py-2 border border-stone-300 rounded-full text-stone-700 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300"
+          className="hidden md:flex items-center gap-2 text-[12px] font-medium tracking-wide uppercase px-5 py-2 border border-stone-300 rounded-full text-stone-750 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all duration-300 hover:scale-105 shadow-xs"
         >
           Get in Touch
         </a>

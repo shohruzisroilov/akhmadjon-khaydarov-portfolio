@@ -87,6 +87,9 @@ export default function Contact() {
       ref={sectionRef}
       className="py-12 md:py-16 bg-[#fafaf9] relative overflow-hidden"
     >
+      {/* Ambient glows */}
+      <div className="absolute top-1/3 -left-20 w-80 h-80 bg-amber-100/15 rounded-full blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-orange-100/10 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12">
         {/* Section Label */}
         <div className="animate-on-scroll flex items-center gap-3 mb-6">
@@ -99,7 +102,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left */}
           <div>
-            <h2 className="animate-on-scroll delay-100 text-3xl md:text-4xl lg:text-5xl font-light text-stone-900 tracking-tight mb-8 leading-tight">
+            <h2 className="animate-on-scroll delay-100 text-3xl md:text-4xl lg:text-5xl font-light text-stone-900 tracking-tight mb-8 leading-tight font-display">
               Let&apos;s build something <span className="font-semibold text-stone-900">great</span>{" "}
               together
               <span className="text-amber-500 font-semibold">.</span>
@@ -233,7 +236,7 @@ export default function Contact() {
               <button
                 type="submit"
                 id="contact-submit-btn"
-                className="group flex items-center gap-3 text-sm font-semibold px-8 py-3.5 bg-stone-900 text-white rounded-full hover:bg-amber-600 transition-all duration-300 shadow-[0_4px_20px_rgba(28,25,23,0.15)] hover:shadow-[0_4px_25px_rgba(28,25,23,0.25)] mt-4"
+                className="group flex items-center gap-3 text-sm font-semibold px-8 py-3.5 bg-stone-900 text-white rounded-full hover:bg-amber-600 hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_4px_20px_rgba(28,25,23,0.15)] hover:shadow-[0_4px_25px_rgba(28,25,23,0.25)] mt-4 cursor-pointer"
               >
                 Send Message
                 <svg

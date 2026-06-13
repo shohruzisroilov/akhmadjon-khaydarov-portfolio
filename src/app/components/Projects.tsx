@@ -102,7 +102,7 @@ export default function Projects() {
         {/* Section Header with Navigation */}
         <div className="animate-on-scroll delay-100 flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 opacity-0">
           <div>
-            <h2 className="text-3xl md:text-4xl font-light text-stone-900 tracking-tight mb-2">
+            <h2 className="text-3xl md:text-4xl font-light text-stone-900 tracking-tight mb-2 font-display">
               Selected <span className="font-semibold">projects</span>
               <span className="text-amber-500 font-semibold">.</span>
             </h2>
@@ -114,7 +114,7 @@ export default function Projects() {
           {/* Navigation Buttons */}
           <div className="flex items-center gap-3 self-start md:self-end">
             <button
-              className="project-prev w-11 h-11 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm flex items-center justify-center text-stone-600 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300 cursor-pointer shadow-sm hover:scale-105 active:scale-95 disabled:opacity-40 disabled:pointer-events-none"
+              className="project-prev w-11 h-11 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm flex items-center justify-center text-stone-600 hover:border-amber-400 hover:text-amber-700 hover:bg-amber-50/20 transition-all duration-300 cursor-pointer shadow-sm hover:scale-105 active:scale-95 disabled:opacity-40 disabled:pointer-events-none"
               aria-label="Previous project"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -122,7 +122,7 @@ export default function Projects() {
               </svg>
             </button>
             <button
-              className="project-next w-11 h-11 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm flex items-center justify-center text-stone-600 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-300 cursor-pointer shadow-sm hover:scale-105 active:scale-95 disabled:opacity-40 disabled:pointer-events-none"
+              className="project-next w-11 h-11 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm flex items-center justify-center text-stone-600 hover:border-amber-400 hover:text-amber-700 hover:bg-amber-50/20 transition-all duration-300 cursor-pointer shadow-sm hover:scale-105 active:scale-95 disabled:opacity-40 disabled:pointer-events-none"
               aria-label="Next project"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -169,10 +169,10 @@ export default function Projects() {
 
                     {/* Project Info */}
                     <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-                      <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-stone-400 mb-4">
+                      <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-amber-600 mb-4 block">
                         Case Study {project.number}
                       </span>
-                      <h3 className="text-xl md:text-2xl font-semibold text-stone-900 mb-3 transition-colors duration-300">
+                      <h3 className="text-xl md:text-2xl font-semibold text-stone-900 mb-3 transition-colors duration-300 font-display">
                         {project.title}
                       </h3>
                       <p className="text-sm text-stone-500 font-light leading-relaxed mb-6">
@@ -184,7 +184,7 @@ export default function Projects() {
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-[11px] font-medium tracking-wide px-3 py-1 bg-stone-50 text-stone-500 rounded-full border border-stone-100"
+                            className="text-[11px] font-medium tracking-wide px-3.5 py-1.5 border border-stone-200/60 text-stone-550 rounded-full hover:bg-amber-50/20 hover:text-amber-700 hover:border-amber-300 transition-colors duration-300"
                           >
                             {tag}
                           </span>

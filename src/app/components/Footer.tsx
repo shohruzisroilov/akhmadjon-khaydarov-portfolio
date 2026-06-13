@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left */}
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-stone-900">
-              AK<span className="text-stone-300">.</span>
+            <span className="text-sm font-semibold text-stone-900 font-display">
+              AK<span className="text-amber-500 font-bold">.</span>
             </span>
             <span className="w-[1px] h-4 bg-stone-200" />
             <span className="text-[12px] text-stone-400 font-light">

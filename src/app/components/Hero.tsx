@@ -4,10 +4,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fafaf9]"
     >
       {/* Subtle dot pattern */}
-      <div className="absolute inset-0 dot-pattern opacity-30" />
+      <div className="absolute inset-0 dot-pattern opacity-25" />
+
+      {/* Ambient glowing blobs */}
+      <div className="absolute top-1/4 left-[10%] w-[380px] h-[380px] bg-amber-200/20 rounded-full blur-[120px] pointer-events-none -z-10 animate-subtle-float" />
+      <div className="absolute bottom-1/4 right-[10%] w-[450px] h-[450px] bg-orange-200/15 rounded-full blur-[130px] pointer-events-none -z-10" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 w-full py-24 lg:py-0">
@@ -23,10 +27,10 @@ export default function Hero() {
             </div>
 
             {/* Main heading */}
-            <h1 className="animate-fade-in-up delay-200 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-stone-900 leading-[1.05]">
-              Akhmadjon
+            <h1 className="animate-fade-in-up delay-200 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-stone-900 leading-[1.05] font-display">
+              Khaydarov
               <br />
-              <span className="font-semibold text-stone-900">Khaydarov</span>
+              <span className="font-semibold text-stone-900">Akhmadjon</span>
               <span className="text-amber-500 font-semibold">.</span>
             </h1>
 
@@ -81,8 +85,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Minimalist Profile Image */}
-          <div className="animate-fade-in-up delay-300 lg:col-span-5 flex justify-center lg:justify-end w-full">
+          {/* Right: Minimalist Profile Image & Socials */}
+          <div className="animate-fade-in-up delay-300 lg:col-span-5 flex flex-col items-center lg:items-end gap-6 w-full">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-72 lg:h-72 xl:w-80 xl:h-80">
               {/* Thin Outer Frame */}
               <div className="absolute inset-0 border border-stone-200 rounded-2xl" />
@@ -99,6 +103,38 @@ export default function Hero() {
               {/* Minimal corner brackets */}
               <div className="absolute -bottom-2 -right-2 w-12 h-12 border-r border-b border-amber-500/40 rounded-br-xl -z-10" />
               <div className="absolute -top-2 -left-2 w-12 h-12 border-l border-t border-amber-500/40 rounded-tl-xl -z-10" />
+            </div>
+
+            {/* LinkedIn & Telegram buttons */}
+            <div className="flex items-center gap-4 w-64 sm:w-72 md:w-80 lg:w-72 xl:w-80 justify-center">
+              <a
+                href="https://www.linkedin.com/in/akhmadjon-khaydarov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 text-[13px] font-medium py-2.5 border border-stone-200 hover:border-amber-500 hover:text-amber-700 bg-white rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-300 hover:scale-[1.02] hover:bg-amber-50/10 group/social"
+              >
+                <svg
+                  className="w-4 h-4 fill-currentColor text-stone-400 group-hover/social:text-amber-600 transition-colors"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://t.me/akhmadjon_kh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 text-[13px] font-medium py-2.5 border border-stone-200 hover:border-amber-500 hover:text-amber-700 bg-white rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-300 hover:scale-[1.02] hover:bg-amber-50/10 group/social"
+              >
+                <svg
+                  className="w-4 h-4 fill-currentColor text-stone-400 group-hover/social:text-amber-600 transition-colors"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                </svg>
+                <span>Telegram</span>
+              </a>
             </div>
           </div>
         </div>

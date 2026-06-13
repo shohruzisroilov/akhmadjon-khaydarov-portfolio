@@ -139,7 +139,7 @@ export default function Experience() {
         </div>
 
         <div className="animate-on-scroll delay-100 flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-stone-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-light text-stone-900 tracking-tight font-display">
             Professional <span className="font-semibold">Journey</span>
             <span className="text-amber-500 font-semibold">.</span>
           </h2>
@@ -158,23 +158,25 @@ export default function Experience() {
               <div
                 key={exp.id}
                 id={exp.id}
-                className="animate-on-scroll relative pl-12 md:pl-16"
+                className="animate-on-scroll relative pl-12 md:pl-16 group"
                 style={{ animationDelay: `${200 + index * 150}ms` }}
               >
                 {/* Timeline dot */}
                 <div
-                  className={`absolute left-[14px] md:left-[18px] top-1 w-[11px] h-[11px] rounded-full border-2 ${
-                    exp.current ? "bg-amber-600 border-amber-600" : "bg-white border-stone-300"
+                  className={`absolute left-[14px] md:left-[18px] top-1.5 w-[11px] h-[11px] rounded-full border-2 transition-all duration-300 group-hover:scale-[1.35] ${
+                    exp.current
+                      ? "bg-amber-600 border-amber-600 group-hover:bg-amber-500 group-hover:border-amber-500"
+                      : "bg-white border-stone-300 group-hover:border-amber-500"
                   }`}
                 />
 
                 {/* Card */}
-                <div className="group p-6 md:p-8 rounded-2xl border border-stone-100 hover:border-stone-200 hover:shadow-lg hover:shadow-stone-100/60 transition-all duration-500 bg-white">
+                <div className="p-6 md:p-8 rounded-2xl border border-stone-100 hover:border-stone-200/80 hover:shadow-xl hover:shadow-stone-100/40 transition-all duration-500 bg-white">
                   {/* Header */}
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-lg font-semibold text-stone-900">{exp.role}</h3>
+                        <h3 className="text-lg font-semibold text-stone-900 font-display">{exp.role}</h3>
                         {exp.current && (
                           <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full">
                             Present
@@ -203,11 +205,11 @@ export default function Experience() {
                     {exp.achievements.map((achievement) => (
                       <div key={achievement} className="flex items-start gap-2">
                         <svg
-                          className="w-3.5 h-3.5 text-stone-400 mt-0.5 shrink-0"
+                          className="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
-                          strokeWidth={2}
+                          strokeWidth={2.5}
                         >
                           <path
                             strokeLinecap="round"
