@@ -108,7 +108,7 @@ export default function Hero() {
             {/* LinkedIn & Telegram buttons */}
             <div className="flex items-center gap-4 w-64 sm:w-72 md:w-80 lg:w-72 xl:w-80 justify-center">
               <a
-                href="https://www.linkedin.com/in/akhmadjon-khaydarov"
+                href="https://www.linkedin.com/in/akhmadjon-khaydarov-04a8b01ab/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 text-[13px] font-medium py-2.5 border border-stone-200 hover:border-amber-500 hover:text-amber-700 bg-white rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-300 hover:scale-[1.02] hover:bg-amber-50/10 group/social"
